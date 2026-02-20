@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2월 20일(금) 프로그램</title>
+<style>
+  :root{
+    --dark:#3a3a3a;
+    --dark2:#2f2f2f;
+    --line:#d9d9d9;
+    --zebra:#f3f3f3;
+    --timebg:#f4f4f4;
+  }
+  body{
+    margin:0;
+    background:#ffffff;
+    font-family:"Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+    color:#111;
+  }
+  .wrap{max-width:1100px; margin:0 auto; padding:28px 20px 60px;}
+  .top-date{
+    text-align:center;
+    font-weight:800;
+    letter-spacing:.5px;
+    margin-bottom:18px;
+    font-size: 26px;
+  }
+
+  /* 다크 바(섹션 헤더) */
+  .bar{
+    background:linear-gradient(90deg,var(--dark),var(--dark2));
+    color:#fff;
+    padding:18px 22px;
+    font-weight:800;
+    font-size:22px;
+    letter-spacing:.3px;
+    margin:22px 0 14px;
+  }
+  .bar.small{
+    font-size:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+  }
+  .bar.small .left{font-weight:900;}
+  .bar.small .right{font-weight:800; opacity:.95;}
+
+  /* 표 기본 */
+  table{
+    width:100%;
+    border-collapse:collapse;
+    box-shadow:0 4px 10px rgba(0,0,0,0.06);
+  }
+  th, td{
+    border:1px solid var(--line);
+    padding:18px 18px;
+    vertical-align:top;
+    font-size:18px;
+    line-height:1.5;
+  }
+  th{
+    background:var(--dark);
+    color:#fff;
+    text-align:left;
+    font-weight:800;
+  }
+  tbody tr:nth-child(even){background:var(--zebra);}
+  td.time-merge{
+    background:var(--timebg);
+    font-weight:900;
+    text-align:center;
+    vertical-align:middle;
+    width:150px;
+    white-space:nowrap;
+  }
+  .meta{
+    color:#555;
+    font-weight:700;
+    margin:10px 0 10px;
+    font-size:16px;
+  }
+
+  /* 동시세션 3열 레이아웃 */
+  .grid3{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:18px;
+  }
+  .card{ }
+  .card .card-title{
+    background:linear-gradient(90deg,var(--dark),var(--dark2));
+    color:#fff;
+    padding:14px 16px;
+    font-weight:900;
+    font-size:18px;
+    margin-bottom:10px;
+  }
+  .card .card-sub{
+    font-weight:900;
+    font-size:18px;
+    margin:10px 0 4px;
+    margin-left:4px;
+  }
+  .card .card-meta{
+    color:#555;
+    font-weight:700;
+    font-size:15px;
+    margin-bottom:10px;
+    margin-left:4px;
+  }
+  .list{
+    border:1px solid var(--line);
+    border-top:none;
+  }
+  .list .row{
+    padding:14px 14px;
+    border-top:1px solid var(--line);
+    background:#fff;
+  }
+  .list .row:nth-child(even){background:var(--zebra);}
+  .who{font-weight:900; margin-top: 4px;}
+  .who span{font-weight:800; color:#333;}
+  .talk{margin-top:6px;}
+  .small-note{font-size:14px; color:#666; font-weight:700;}
+
+  /* 반응형 */
+  @media (max-width: 980px){
+    .grid3{grid-template-columns:1fr;}
+    th,td{font-size:16px;}
+    .bar{font-size:20px;}
+  }
+
+  .talk a{
+    color:#3075d7;
+    text-decoration:none;
+  }
+
+  .talk a:hover{
+  color:#1f4fa8;
+}
+
+</style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top-date">2월 20일(금)</div>
+
+    <!-- 사전행사 -->
+    <div class="bar small">
+      <div class="left">09:30–09:50</div>
+      <div class="right">사전행사 │ 개회 선언 및 축사</div>
+    </div>
+
+    <!-- 오전 동시세션(09:30~) -->
+    <div class="bar">09:50–12:40 프로그램</div>
+
+    <div class="grid3">
+      <!-- SS1 -->
+      <section class="card">
+        <div class="card-title">기획 세션 | SS1호</div>
+        <div class="card-sub">학술팀 주제발표: 시끄러운 민주주의와 문학의 자리</div>
+        <div class="card-meta">사회: 이미영(강원대)</div>
+
+        <div class="list">
+          <div class="row">
+            <div class="talk"><a href="#">은폐된 기억의 서술과 해방기 역사의 복원 - 김성동 후기 소설을 중심으로 </a></div>
+            <div class="who">이하은<span>(충남대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">‘박진경’이라는 기호와 논쟁화되는 사실들 - 제주 4.3의 제도화 이후 담론 변화를 중심으로</a></div>
+            <div class="who">김동현<span>(제주대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">해방기 여학생 정치참여와 우경화 - 국대안 파동과 웅변대회를 중심으로</a></div>
+            <div class="who">코쑤 리디아<span>(카포스카리 베니스대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">여전히 이것은 노동하는 인간의 문제 - 프레카리아트 노동문학은 가능한가</a></div>
+            <div class="who">김도운<span>(이화여대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">자료의 민주주의, 공화국의 문헌들 - 북한문학 연구자의 (지극히 개인적인) 자료 탐색기</a></div>
+            <div class="who">김민선<span>(연세대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">응원봉 소녀의 문화정치 - 동시대 한국소설로 본 ‘아이돌 팬’의 초상</a></div>
+            <div class="who">전예원<span>(성균관대)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SS2 -->
+      <section class="card">
+        <div class="card-title">동시 세션 1 | SS2호</div>
+        <div class="card-sub">구보학회: 최정희 전집 발간 기념 콜로키움 - 지금, 여기 최정희 읽기</div>
+        <div class="card-meta">사회: 손유경(서울대)</div>
+
+        <div class="list">
+          <div class="row">
+            <div class="talk"><a href="#">‘전향 문학’으로서 최정희 소설 읽기</a></div>
+            <div class="who">유승환<span>(구보학회)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">친일에 대한 면책 요구의 근거로서 ‘여성’ - 최정희 장편소설 ‘녹색’의 문인 젠더 정치</a></div>
+            <div class="who">한경희<span>(한중연)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">무능과 방임 - 1950년대 후반 최정희 소설의 ‘아버지’ 재현 양상</a></div>
+            <div class="who">장영은<span>(성균관대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">아프레걸 서사로서의 1950년대 중후반 최정희 장편소설 연구</a></div>
+            <div class="who">변하연<span>(서울대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">1950-60년대 최정희 소설에 나타난 ‘일하는’ 여성 표상 연구</a></div>
+            <div class="who">민선혜<span>(서울대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><b>라운드테이블</b></div>
+            <div class="who">배상미<span>(고려대)</span> · 서영인<span>(국립한국문학관)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SS3 -->
+      <section class="card">
+        <div class="card-title">동시 세션 2 | SS3호</div>
+        <div class="card-sub">상허학회: 글로벌 우경화, 젠노사이드와 인종주의를 넘어서 - 연대와 환대의 가능성을 묻다</div>
+        <div class="card-meta">사회: 허윤(이화여대)</div>
+
+        <div class="list">
+          <div class="row">
+            <div class="talk"><a href="#">‘혐한’ 이후 일본의 배외주의 경동의 재편</a></div>
+            <div class="who">발표 조경희<span>(성공회대)</span> · 토론 정창훈<span>(인하대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">아시아 유민 및 ‘소수자’가 마주한 ‘팔레스타인’ - 재일조선인(및 한국)의 ‘팔레스타인’ 연대활동과 여성·장애·비/인간 존재들</a></div>
+            <div class="who">발표 신지영<span>(연세대)</span> · 토론 나영정<span>(퀴어팔레스타인연대QK48)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">1976년 태국 탐마삿 학살, 홀로코스트와 청년 정치 - 한국 청년 정치 참여에 대한 함의</a></div>
+            <div class="who">발표 이정우<span>(고려대)</span> · 토론 우창준<span>(한중연)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">에스타오(葉石濤)의 2.28 사건 재현의 변주 - 40년 간격의 두 작품을 중심으로</a></div>
+            <div class="who">발표 신민영<span>(연세대)</span> · 토론 박용재<span>(동국대)</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 오후 동시세션(13:40) -->
+    <div class="bar">13:40 프로그램</div>
+
+    <div class="grid3">
+      <!-- 문학팀 라운드테이블 -->
+      <section class="card">
+        <div class="card-title">문학팀 라운드 테이블 | SS1호</div>
+        <div class="card-sub">연구자의 판짓</div>
+        <div class="card-meta">사회: 이한빛(캣츠랩)</div>
+
+        <div class="list">
+          <div class="row"><div class="who">발표</div>
+            <div class="talk">이윤희(한양대) · 장기영(연세대) · 조익상(서원대) · 최나현(부산대)</div>
+          </div>
+          <div class="row">
+            <div class="card-sub" style="margin:0;">연구자의 서재</div>
+            <div class="small-note">세미나 만남의 광장 · 책교환 프로젝트 &lt;책산책&gt; · 책갈피 SNS 프로그램</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 대중서사학회 -->
+      <section class="card">
+        <div class="card-title">대중서사학회 | SS2호</div>
+        <div class="card-sub">한국 SF 비평의 가능성</div>
+        <div class="card-meta">사회: 박인성(부산가톨릭대) · 최진석(서울과기대)</div>
+
+        <div class="list">
+          <div class="row"><div class="talk"><a href="#">한국 SF와 ‘만들어진 신’의 상상력</a></div><div class="who">오윤효(이화여대)</div></div>
+          <div class="row"><div class="talk"><a href="#">21세기 한국 어린이 청소년 SF의 전복성 연구 - 보슬비 SF 추천작을 중심으로</a></div><div class="who">최배은(숙명여대)</div></div>
+          <div class="row"><div class="talk"><a href="#">신유물론으로 읽는 김보영의 생태 SF</a></div><div class="who">연남경(이화여대)</div></div>
+          <div class="row"><div class="talk"><a href="#">지금 여기에서 다음을 외치다 - 2020년대 전후 한국 SF의 헤테로토피아</a></div><div class="who">최하은(계명대)</div></div>
+          <div class="row"><div class="talk"><a href="#">SF ‘연극’ 연구의 방향성에 대한 소고</a></div><div class="who">전지나(한경국립대)</div></div>
+          <div class="row"><div class="talk"><b>라운드 테이블</b> 한국 SF 비평의 미래</div></div>
+        </div>
+      </section>
+
+      <!-- 한국극예술학회 -->
+      <section class="card">
+        <div class="card-title">한국극예술학회 | SS3호</div>
+        <div class="card-sub">민주주의와 자본주의 사이 - 광장, 극장, 매체의 역학과 한국 공연예술</div>
+        <div class="card-meta">사회: 김상민(한국방송통신대)</div>
+
+        <div class="list">
+          <div class="row">
+            <div class="talk"><a href="#">플랫폼 자본주의와 블랙박스에 갇힌 노동 - &lt;자본3: 플랫폼과 데이터&gt;(2022)를 중심으로</a></div>
+            <div class="who">발표 박미란(공군사관학교) · 토론 양근아(명지대)</div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">저항의 풍경 - 1980년대 이후 노동 다큐의 변화를 중심으로</a></div>
+            <div class="who">발표 배주연(서강대) · 토론 김지연(연세대)</div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">경제적 인간의 생존, 기업가적 주체와 렌티어루스 사이에서 - &lt;태풍상사&gt;와 &lt;서울 자가에 대기업 김부장&gt;을 중심으로</a></div>
+            <div class="who">발표 김혜인(동국대) · 토론 권두현(연세대)</div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">글로벌 OTT플랫폼의 자본력과 K드라마의 형질 전환</a></div>
+            <div class="who">발표 윤석진(충남대) · 토론 문선영(한국항공대)</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 17:00 대담 -->
+     <section class="card">
+    <div class="bar small">
+      <div class="left">17:00</div>
+      <div class="right">김멜라 작가와의 대화</div>
+    </div>
+    <div class="card-sub">그 자리에 함께 있기 - 목 없는 자들의 말하기와 문학의 민주주의</div>
+    <div class="meta">사회: 강동호(인하대) · 배하은(DGIST)</div>
+    </section>
+
+    <!-- 상시 프로그램 -->
+    <div class="bar">상시 프로그램</div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:220px;">구분</th>
+          <th>내용</th>
+          <th>비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>한국현대문학의 건설자들</b></td>
+          <td>강인숙 선생님과의 대화(글로 지은 집에서 여성 연구자의 반 세기를 듣다) · 이상경 선생님과의 대화(페미니스트로서 문학 연구하기)</td>
+          <td><b>2월 20일(금) :</b> 552·553호 12:40, 17:00
+            <br/><br/><b>2월 21일(토) :</b> 552·553호 12:30</td>
+        </tr>
+        <tr>
+          <td><b>(연구자 다방) S14호</b></td>
+          <td>연구자의 서재 · 세미나 만남의 광장 · 책 교환 프로젝트 &lt;책 산책&gt; · 책갈피 SNS 프로그램</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><b>연대 단체 및 후원 부스</b></td>
+          <td>전국대학원생노동조합 · 연구자공동체 · 소명출판</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+    <div class="wrap">
+    <div class="top-date">2월 21일(토)</div>
+
+    <!-- 오전 동시세션 -->
+    <div class="bar">10:00 프로그램</div>
+
+    <div class="grid3">
+      <!-- SS1 -->
+      <section class="card">
+        <div class="card-title">기획 세션 | SS1호</div>
+        <div class="card-sub">학술팀 자유 발표: 국가와 학제의 경계 그리고 문학의 자리</div>
+        <div class="card-meta">사회: 조은영(중부대)</div>
+
+        <div class="list">
+          <div class="row">
+            <div class="talk"><a href="#">일제강점기 소설에 나타난 국민과 민족 너머의 사유 - 김광주의 ‘북명서’ 온 영감과 김사량의 ‘지기미’를 중심으로</a></div>
+            <div class="who">모지현<span>(부산대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">가족사 연대기 소설과 고향이라는 ‘원시’ 공간의 탄생, 그리고 김사량의 낙조</a></div>
+            <div class="who">박미라<span>(부산대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">기획으로서의 브라질 이민과 사상계 여성 이민자 표상</a></div>
+            <div class="who">북경연<span>(부산대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">서술 시간(narrated time) 추정의 언어 간 검증 - 한국어 문학 텍스트와 LLM의 비교</a></div>
+            <div class="who">이시현 · 황태겸 · 박혜승<span>(협성대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">2008–2024 KCI 데이터로 본 한국문학/한국영문학 담론의 시계열적 비교 분석</a></div>
+            <div class="who">김가연 · 박선영 · 김병준<span>(한중연)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SS2 -->
+      <section class="card">
+        <div class="card-title">동시 세션 1 | SS2호</div>
+        <div class="card-sub">한국현대문학회: ‘해방’의 재배치</div>
+        <div class="card-meta">시간: 09:30 · 사회: 나보령(한국해양대)</div>
+
+        <div class="list">
+          <div class="row">
+            <div class="talk"><a href="#">전가가 못 된 청춘은 어디로 가는가 - 전위시인집, 주변에서</a></div>
+            <div class="who">최희진<span>(서울대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">반복의 틈새에서 변혁의 씨앗을 보다 - 김달수 소설 ‘박달’의 재판의 포스트식민지적 목소리</a></div>
+            <div class="who">조은애<span>(동국대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">변경(邊境)으로(부터)의 귀환 - 일본인 여성’들의 전후를 말하다</a></div>
+            <div class="who">심아정<span>(독립연구활동가)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">기억의 층위들 - 우키시마호 사건의 귀환과 재현</a></div>
+            <div class="who">백소연<span>(가톨릭대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><b>토론</b></div>
+            <div class="who">가케모토 츠요시<span>(리츠메이칸대)</span> · 박연희<span>(연세대)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SS3 -->
+      <section class="card">
+        <div class="card-title">동시 세션 2 | SS3호</div>
+        <div class="card-sub">한국근대문학회: 위반과 연대 - ‘문학 연구의 민주화’라는 현상</div>
+        <div class="card-meta">시간: 09:30 · 사회: 전소영(중부대) · 양순모(연세대)</div>
+
+        <div class="list">
+          <div class="row">
+            <div class="talk"><a href="#">신비한 힘을 지닌 여자들과 환대의 공동체 - 『그리고 마녀는 숲으로 갔다』를 중심으로</a></div>
+            <div class="who">발표 안지영<span>(경기대)</span> · 토론 서여진<span>(덕성여대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">1920~1930년대 ‘풍속괴란’ 소설 검열의 허상 - 치안 통제로서의 풍속 통제</a></div>
+            <div class="who">발표 조자영<span>(서강대)</span> · 토론 임보람<span>(강원대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">즐겁게, 오래도록 연구하기 위하여 - 장르·공동·현장 연구의 실천적 문제들</a></div>
+            <div class="who">발표 최혜령 · 서원득<span>(연세대)</span> · 토론 이지웅<span>(단국대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">자본주의 호러 - 공포 웹소설에 나타난 기업가적 인간들</a></div>
+            <div class="who">발표 유인혁<span>(전주대)</span> · 토론 김정현<span>(부산가톨릭대)</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 13:30 프로그램 -->
+    <div class="bar">13:30 프로그램</div>
+
+    <div class="grid3">
+      <!-- 지역팀 -->
+      <section class="card">
+        <div class="card-title">지역팀 라운드 테이블 | SS1호</div>
+        <div class="card-sub">지역 정전과 한국문학사의 재구성</div>
+        <div class="card-meta">시간: 13:30</div>
+
+        <div class="list">
+          <div class="row">
+            <div class="talk"><a href="#">1950년대 문단의 결절, 강릉 청포도동인회</a></div>
+            <div class="who">남기택<span>(강원문학연구회)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">생성의 장소 인제와 박인환의 시 쓰기</a></div>
+            <div class="who">류상범<span>(강원대)</span> · 김화선<span>(배재대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">명인수의 『깊은 강은 흐른다』, 해방 정국, 송완순 비평 속 ‘어린이를 위한 나라’ 건설의 이상과 좌절</a></div>
+            <div class="who">신동재<span>(춘천교대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">‘후레아휘손’ 여성 노동자 투쟁과 글로벌 연대 - 1987년 이리 수출자유지역 여성노동자의 현장의 편지</a></div>
+            <div class="who">김만석<span>(광주모더니즘)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">1980년대 지역문화운동과 낙동강 - 무크지 ‘토박이’와 이문열의 ‘하구’를 중심으로</a></div>
+            <div class="who">박수정<span>(부산대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">한국근현대사와 영남지역의 대항 역사로서 『한티재 하늘』</a></div>
+            <div class="who">배지연<span>(경북대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">작별할 수 없는 장소 - 『작별하지 않는다』가 기억하는 경산 코발트 광산</a></div>
+            <div class="who">양진오<span>(대구대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">그들은 만났을까 - 김태오와 박홍희의 경우</a></div>
+            <div class="who">정민구<span>(전남대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">김수영과 서울의 장소성</a></div>
+            <div class="who">이민호<span>(김수영연구회)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">‘국가폭력’으로서의 4.3 너머 - 한림화 소설 속 해방기 제주 민중/여성의 복원</a></div>
+            <div class="who">김소영<span>(제주대)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 입화연구회 -->
+      <section class="card">
+        <div class="card-title">입화연구회 | SS2호</div>
+        <div class="card-sub">카프 창립 100주년 기념 저서 북토크 - 백 년 동안의 미망과 희망</div>
+        <div class="card-meta">사회: 최은혜(경상국립대)</div>
+
+        <div class="list">
+          <div class="row">
+            <div class="talk"><b>I. 저자들의 이야기</b></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">카프 시의 보편성과 그 현재적 지평</a></div>
+            <div class="who">고봉준<span>(경희대)</span> · 김학중<span>(경희대)</span> · 윤종환<span>(연세대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">카프문학의 서사적 가능성과 정치성</a></div>
+            <div class="who">조지혜<span>(서울대)</span> · 이재웅<span>(경상국립대)</span> · 정윤성<span>(연세대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">카프의 사상과 실천, 테크놀로지적 상상력</a></div>
+            <div class="who">이종호<span>(고려대)</span> · 이용범<span>(부산대)</span> · 홍덕구<span>(국립군산대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><b>II. 난상토론</b> 프로문학 연구의 공동성 만들기</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 민족문학연구소 -->
+      <section class="card">
+        <div class="card-title">민족문학연구소 | SS3호</div>
+        <div class="card-sub">타자로서의 한국문학과 문학사 교육</div>
+        <div class="card-meta">사회: 반재영(고려대)</div>
+
+        <div class="list">
+          <div class="row">
+            <div class="talk"><b>기조강연</b></div>
+            <div class="who">박진영<span>(성균관대)</span></div>
+            <div class="talk">질문으로서 문학사, 외국문학으로서 한국문학사</div>
+          </div>
+          <div class="row">
+            <div class="talk"><b>라운드 테이블</b> 발제 및 작담</div>
+            <div class="who">손혜미<span>(서강대)</span> · 정상훈<span>(한국기술교육대)</span> · 정희원<span>(영미문학연구회)</span> · 류인태<span>(전남대)</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 15:50 -->
+    <div class="bar small">
+      <div class="left">15:50</div>
+      <div class="right">제도팀 심포지엄 : 한국현대문학 연구성과와 자본 | SS1호</div>
+    </div>
+    <div class="meta">사회: 조윤정(국민대) · 홍성희(연세대)</div>
+
+    <section class="card">
+      <div class="list">
+        <div class="row">
+          <div class="talk"><a href="#">AI 시대, 학술 공유지를 지키는 법</a></div>
+          <div class="who">발표 김병준<span>(지식공유연대/한중연)</span> · 토론 정은경<span>(이화여대)</span></div>
+        </div>
+        <div class="row">
+          <div class="talk"><a href="#">비정규교수 운동과 강사법 체계의 대학 사회</a></div>
+          <div class="who">발표 김진군<span>(비정규교수노조)</span> · 토론 이형진<span>(동아대)</span></div>
+        </div>
+        <div class="row">
+          <div class="talk"><a href="#">먹물 노동자 신년회 - 자본은 내 공부를 어떻게 (못) 바꾸나?</a></div>
+          <div class="who">발표 김경민<span>(성균관대)</span> · 김보해<span>(동국대)</span> · 김종현<span>(충남대)</span> · 김창욱<span>(연세대)</span> · 최석열<span>(연세대)</span> · 홍부일<span>(고려대)</span> 외 2명</div>
+        </div>
+        <div class="row">
+          <div class="talk"><b>전체 패널 토론</b></div>
+          <div class="who">김명환<span>(국가교육위원회 인문특위)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 18:10 폐회식 -->
+    <div class="bar small">
+      <div class="left">18:10</div>
+      <div class="right">폐회식 │ 한국현대문학자대회 공동선언</div>
+    </div>
+    <div class="meta">사회: 임세화(인문학협동조합)</div>
+
+  </div>
+</body>
+</html>

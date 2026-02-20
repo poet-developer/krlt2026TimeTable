@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2월 20일(금) 프로그램</title>
+<style>
+  :root{
+    --dark:#3a3a3a;
+    --dark2:#2f2f2f;
+    --line:#d9d9d9;
+    --zebra:#f3f3f3;
+    --timebg:#f4f4f4;
+  }
+  body{
+    margin:0;
+    background:#ffffff;
+    font-family:"Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+    color:#111;
+  }
+  .wrap{max-width:1100px; margin:0 auto; padding:28px 20px 60px;}
+  .top-date{
+    text-align:center;
+    font-weight:800;
+    letter-spacing:.5px;
+    margin-bottom:18px;
+    font-size: 26px;
+  }
+
+  /* 다크 바(섹션 헤더) */
+  .bar{
+    background:linear-gradient(90deg,var(--dark),var(--dark2));
+    color:#fff;
+    padding:18px 22px;
+    font-weight:800;
+    font-size:22px;
+    letter-spacing:.3px;
+    margin:22px 0 14px;
+  }
+  .bar.small{
+    font-size:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+  }
+  .bar.small .left{font-weight:900;}
+  .bar.small .right{font-weight:800; opacity:.95;}
+
+  /* 표 기본 */
+  table{
+    width:100%;
+    border-collapse:collapse;
+    box-shadow:0 4px 10px rgba(0,0,0,0.06);
+  }
+  th, td{
+    border:1px solid var(--line);
+    padding:18px 18px;
+    vertical-align:top;
+    font-size:18px;
+    line-height:1.5;
+  }
+  th{
+    background:var(--dark);
+    color:#fff;
+    text-align:left;
+    font-weight:800;
+  }
+  tbody tr:nth-child(even){background:var(--zebra);}
+  td.time-merge{
+    background:var(--timebg);
+    font-weight:900;
+    text-align:center;
+    vertical-align:middle;
+    width:150px;
+    white-space:nowrap;
+  }
+  .meta{
+    color:#555;
+    font-weight:700;
+    margin:10px 0 10px;
+    font-size:16px;
+  }
+
+  /* 동시세션 3열 레이아웃 */
+  .grid3{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:18px;
+  }
+  .card{ }
+  .card .card-title{
+    background:linear-gradient(90deg,var(--dark),var(--dark2));
+    color:#fff;
+    padding:14px 16px;
+    font-weight:900;
+    font-size:18px;
+    margin-bottom:10px;
+  }
+  .card .card-sub{
+    font-weight:900;
+    font-size:18px;
+    margin:10px 0 4px;
+    margin-left:4px;
+  }
+  .card .card-meta{
+    color:#555;
+    font-weight:700;
+    font-size:15px;
+    margin-bottom:10px;
+    margin-left:4px;
+  }
+  .list{
+    border:1px solid var(--line);
+    border-top:none;
+  }
+  .list .row{
+    padding:14px 14px;
+    border-top:1px solid var(--line);
+    background:#fff;
+  }
+  .list .row:nth-child(even){background:var(--zebra);}
+  .who{font-weight:900; margin-top: 4px;}
+  .who span{font-weight:800; color:#333;}
+  .talk{margin-top:6px;}
+  .small-note{font-size:14px; color:#666; font-weight:700;}
+
+  /* 반응형 */
+  @media (max-width: 980px){
+    .grid3{grid-template-columns:1fr;}
+    th,td{font-size:16px;}
+    .bar{font-size:20px;}
+  }
+
+  .talk a{
+    color:#3075d7;
+    text-decoration:none;
+  }
+
+  .talk a:hover{
+  color:#1f4fa8;
+}
+
+ /* 토론문 링크(이름 옆 배지) */
+.debate-link{
+  display:inline-block;
+  margin-left:8px;
+  padding:3px 8px;
+  font-size:12px;
+  font-weight:800;
+  color:#1f4fa8;;
+  background: rgba(48,117,215,0.08);
+  text-decoration:none;
+  vertical-align:middle;
+  transition: all .2s ease;
+}
+
+.debate-link-essay{
+  display:inline-block;
+  margin-left:8px;
+  padding:3px 8px;
+  font-size:12px;
+  font-weight:800;
+ color:black;
+  background: white;
+  text-decoration:none;
+  vertical-align:middle;
+  transition: all .2s ease;
+}
+
+.debate-link:hover{
+  background: rgba(48,117,215,0.16);
+  border-color:#aebad1;
+  transform: translateY(-1px);
+}
+
+/* 토론자 구분(토론 라벨) 살짝 톤 다운 */
+.role{
+  font-weight:800;
+  color:#555;
+}
+
+
+</style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top-date">2월 20일(금)</div>
+
+    <!-- 사전행사 -->
+    <div class="bar small">
+      <div class="left">09:30–09:50</div>
+      <div class="right">사전행사 │ 개회 선언 및 축사</div>
+    </div>
+
+    <!-- 오전 동시세션(09:30~) -->
+    <div class="bar">09:50–12:40 프로그램</div>
+
+    <div class="grid3">
+      <!-- 551 -->
+      <section class="card">
+        <div class="card-title">기획 세션 | 551호</div>
+        <div class="card-sub">학술팀 주제발표: 시끄러운 민주주의와 문학의 자리</div>
+        <div class="card-meta">사회: 이미영(강원대)</div>
+        <div class="list">
+          <div class="row">
+    <div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/학술팀-01_이하은-포스터용-현수막-1매-700_1200.pdf">은폐된 기억의 서술과 해방기 역사의 복원 - 김성동 후기 소설을 중심으로</a></div>
+    <div class="who">이하은<span>(충남대)</span><a class="debate-link" href="http://krlt.org/wp-content/uploads/2026/02/학술팀-01_1-이하은.pdf" target="_blank" rel="noopener">요약문</a></div>
+          </div>
+  <div class="row">
+    <div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/학술팀-01_김동현-포스터용-현수막-1매-700_1200.pdf">'박진경'이라는 기호와 논쟁화되는 사실들 - 제주 4.3의 제도화 이후 담론 변화를 중심으로</a></div>
+    <div class="who">김동현<span>(제주대)</span><a class="debate-link" href="http://krlt.org/wp-content/uploads/2026/02/학술팀-01_2.-김동현.pdf" target="_blank" rel="noopener">요약문</a></div>
+          </div>
+  <div class="row">
+    <div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/학술팀-01_리디아-포스터용-현수막-1매-700_1200.pdf">해방기 여학생 정치참여와 우경화 - 국대안 파동과 웅변대회를 중심으로</a></div>
+    <div class="who">코쑤 리디아<span>(카포스카리 베니스대)</span><a class="debate-link" href="http://krlt.org/wp-content/uploads/2026/02/학술팀-01_3-코쑤-리디아.pdf" target="_blank" rel="noopener">요약문</a></div>
+  </div>
+  <div class="row">
+    <div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/학술팀-01_김도운-포스터용-현수막-1매-700_1200.pdf">여전히 이것은 노동하는 인간의 문제 - 프레카리아트 노동문학은 가능한가</a></div>
+    <div class="who">김도운<span>(이화여대)</span><a class="debate-link" href="http://krlt.org/wp-content/uploads/2026/02/학술팀-01_4-김도운.pdf" target="_blank" rel="noopener">요약문</a></div>
+  </div>
+  <div class="row">
+    <div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/학술팀-01_김민선-포스터용-현수막-1매-700_1200.pdf">자료의 민주주의, 공화국의 문헌들 - 북한문학 연구자의 (지극히 개인적인) 자료 탐색기</a></div>
+    <div class="who">김민선<span>(연세대)</span><a class="debate-link" href="http://krlt.org/wp-content/uploads/2026/02/학술팀-01_5-김민선.pdf" target="_blank" rel="noopener">요약문</a></div>
+  </div>
+  <div class="row">
+    <div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/학술팀-01_전예원-포스터용-현수막-1매-700_1200.pdf">응원봉 소녀의 문화정치 - 동시대 한국소설로 본 '아이돌 팬'의 초상</a></div>
+    <div class="who">전예원<span>(성균관대)</span><a class="debate-link" href="http://krlt.org/wp-content/uploads/2026/02/학술팀-01_6-전예원.pdf" target="_blank" rel="noopener">요약문</a></div>
+  </div>
+        </div>
+      </section>
+
+      <!-- 552 -->
+      <section class="card">
+        <div class="card-title">동시 세션 1 | 552호</div>
+        <div class="card-sub">구보학회: 최정희 전집 발간 기념 콜로키움 - 지금, 여기 최정희 읽기</div>
+        <div class="card-meta">사회: 손유경(서울대)</div>
+
+        <div class="list">
+          <div class="row">
+            <div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/구보학회-2026년-콜로키움-지금-여기-최정희-읽기-유승환-‘전향-문학으로서-최정희-소설-읽기.pdf">'전향 문학'으로서 최정희 소설 읽기</a></div>
+            <div class="who">유승환<span>(서울시립대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/구보학회-2026년-콜로키움-지금-여기-최정희-읽기-한경희-‘친일파라는-사회적-비난에-대한-항변.pdf">친일에 대한 면책 요구의 근거로서 '여성' - 최정희 장편소설 『녹색의 문』의 젠더 정치</a></div>
+            <div class="who">한경희<span>(한국학중앙연구원)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="https://krlt.org/archive/krlt2026/">무능과 방임 - 1950년대 후반 최정희 소설의 '아버지' 재현 양상</a></div>
+            <div class="who">장영은<span>(성균관대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/구보학회-2026년-콜로키움-지금-여기-최정희-읽기-변하연-아프레걸-서사로서의-1950년대-중후반-최정희-장편소설-연구.pdf">아프레걸 서사로서의 1950년대 중후반 최정희 장편소설 연구</a></div>
+            <div class="who">변하연<span>(서울대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/구보학회-2026년-콜로키움-지금-여기-최정희-읽기-민선혜-1950-60년대-최정희-소설에-나타난-‘일하는-여성-표상-연구.pdf">1950-60년대 최정희 소설에 나타난 ‘일하는’ 여성 표상 연구</a></div>
+            <div class="who">민선혜<span>(서울대)</span></div>
+          </div>
+          <div class="row">
+            <div class="talk"><b>라운드테이블</b></div>
+            <div class="who">배상미<span>(고려대)</span> · 서영인<span>(국립한국문학관)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 553 -->
+      <section class="card">
+        <div class="card-title">동시 세션 2 | 553호</div>
+        <div class="card-sub">상허학회: 글로벌 우경화, 제노사이드와 인종주의를 넘어서 - 연대와 환대의 가능성을 묻다</div>
+        <div class="card-meta">사회: 허윤(이화여대)</div>
+
+        <div class="list">
+          <div class="row">
+            <div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/상허학회-2026-겨울-정기-학술대회-발표문-1-조경희.pdf">‘혐한’ 이후 일본의 배외주의 정동의 재편</a></div>
+            <div class="who">
+  <span class="role">발표</span> 조경희<span>(성공회대)</span> ·
+  <span class="role">토론</span> 정창훈<span>(인하대)</span>
+  <a class="debate-link" href="http://krlt.org/wp-content/uploads/2026/02/상허학회-2026-겨울-정기-학술대회-토론문-1-정창훈.pdf" target="_blank" rel="noopener">토론문</a>
+</div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/상허학회-2026-겨울-정기-학술대회-발표문-2-신지영.pdf">아시아 유민 및 ‘소수자’가 마주한 ‘팔레스타인’ - 재일조선인(및 한국)의 ‘팔레스타인’ 연대활동과 여성 · 장애 · 비/인간 존재들</a></div>
+            <div class="who">
+  <span class="role">발표</span> 신지영<span>(연세대)</span> ·
+  <span class="role">토론</span> 나영정<span>(퀴어팔레스타인연대QK48)</span>
+  <a class="debate-link" href="#" target="_blank" rel="noopener">토론문</a>
+</div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/상허학회-2026-겨울-정기-학술대회-발표문-3-이정우.pdf">1976년 태국 탐마삿 학살, 홀로코스트와 청년 정치 - 한국 청년 정치 참여에 대한 함의</a></div>
+            <div class="who"><span class="role">발표</span> 이정우<span>(고려대)</span> · <span class="role">토론</span> 옥창준<span>(한국학중앙연구원)</span><a class="debate-link" href="http://krlt.org/wp-content/uploads/2026/02/상허학회-2026-겨울-정기-학술대회-토론문-3-옥창준.pdf" target="_blank" rel="noopener">토론문</a></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/상허학회-2026-겨울-정기-학술대회-발표문-4-신민영.pdf">예스타오(葉石濤)의 2.28 사건 재현의 변주 - 40년 간격의 두 작품을 중심으로</a></div>
+            <div class="who"><span class="role">발표</span> 신민영<span>(연세대)</span> · <span class="role">토론</span> 박용재<span>(동국대)</span><a class="debate-link" href="http://krlt.org/wp-content/uploads/2026/02/상허학회-2026-겨울-정기-학술대회-토론문-4-박용재.pdf" target="_blank" rel="noopener">토론문</a></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 오후 동시세션(13:40) -->
+    <div class="bar">13:40 프로그램</div>
+
+    <div class="grid3">
+      <!-- 문학팀 라운드테이블 -->
+      <section class="card">
+        <div class="card-title">문학팀 라운드 테이블 | 551호</div>
+        <div class="card-sub">연구자의 딴짓</div>
+        <div class="card-meta">사회: 이한빛(캣츠랩)</div>
+
+        <div class="list">
+          <div class="row"><div class="who">발표</div>
+            <div class="talk">이융희(한양대) · 장기영(연세대) · 조익상(서원대) · 최나현(부산대)</div>
+          </div>
+          <div class="row">
+            <div class="card-sub" style="margin:0;">연구자의 서재</div>
+            <div class="small-note">세미나 만남의 광장 · 책교환 프로젝트 &lt;책산책&gt; · 책갈피 SNS 프로그램</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 대중서사학회 -->
+      <section class="card">
+        <div class="card-title">대중서사학회 | 552호</div>
+        <div class="card-sub">한국 SF 비평의 가능성</div>
+        <div class="card-meta">사회: 박인성(부산가톨릭대) · 최진석(서울과기대)</div>
+
+        <div class="list">
+          <div class="row"><div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/오윤호-발표원고.pdf">한국 SF와 ‘만들어진 신’의 상상력</a></div><div class="who">오윤호(이화여대)</div></div>
+          <div class="row"><div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/최배은-발표원고.pdf">21세기 한국 어린이 청소년 SF의 전복성 연구 - 보슬비 SF 추천작을 중심으로</a></div><div class="who">최배은(숙명여대)</div></div>
+          <div class="row"><div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/연남경-발표원고.pdf">신유물론으로 읽는 김보영의 생태 SF</a></div><div class="who">연남경(이화여대)</div></div>
+          <div class="row"><div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/최애순-발표원고.pdf">지금 여기에서 다름을 외치다 - 2020년대 전후 한국 SF의 헤테로토피아</a></div><div class="who">최애순(계명대)</div></div>
+          <div class="row"><div class="talk"><a href="http://krlt.org/wp-content/uploads/2026/02/전지니-발표원고.pdf">SF ‘연극’ 연구의 방향성에 대한 소고</a></div><div class="who">전지니(한경국립대)</div></div>
+          <div class="row"><div class="talk"><b>라운드 테이블</b> 한국 SF 비평의 미래</div></div>
+        </div>
+      </section>
+
+      <!-- 한국극예술학회 -->
+      <section class="card">
+        <div class="card-title">한국극예술학회 | 553호</div>
+        <div class="card-sub">민주주의와 자본주의 사이 - 광장, 극장, 매체의 역학과 한국 극예술</div>
+        <div class="card-meta">사회: 김상민(한국방송통신대)</div>
+
+        <div class="list">
+          <div class="row">
+            <div class="talk"><a href="#">플랫폼 자본주의와 블랙박스에 갇힌 노동 - &lt;자본3: 플랫폼과 데이터&gt;(2022)를 중심으로</a></div>
+            <div class="who">발표 박미란(공군사관학교) · 토론 양근애(명지대)<a class="debate-link" href="#" target="_blank" rel="noopener">토론문</a></div>
+            
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">저항의 풍경 - 1980년대 이후 노동 다큐의 변화를 중심으로</a></div>
+            <div class="who">발표 배주연(서강대) · 토론 김지언(연세대)<a class="debate-link" href="#" target="_blank" rel="noopener">토론문</a></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">경제적 인간의 생존, 기업가적 주체와 렌티어루스 사이에서 - &lt;태풍상사&gt;와 &lt;서울 자가에 대기업 김부장&gt;을 중심으로</a></div>
+            <div class="who">발표 김혜인(동국대) · 토론 권두현(연세대)<a class="debate-link" href="#" target="_blank" rel="noopener">토론문</a></div>
+          </div>
+          <div class="row">
+            <div class="talk"><a href="#">글로벌 OTT플랫폼의 자본력과 K드라마의 형질 전환</a></div>
+            <div class="who">발표 윤석진(충남대) · 토론 문선영(한국항공대)<a class="debate-link" href="#" target="_blank" rel="noopener">토론문</a></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 17:00 대담 -->
+     <section class="card">
+    <div class="bar small">
+      <div class="left">17:00</div>
+
+      <div class="right">김멜라 작가와의 대화<a class="debate-link-essay" href="https://open.kakao.com/o/pxfY6dhi" target="_blank" rel="noopener">오픈 채팅방</a></div></div>
+    </div>
+    <div class="card-sub">그 자리에 함께 있기 : 몫 없는 자들의 말하기와 문학의 민주주의<a class="debate-link" href="http://krlt.org/wp-content/uploads/2026/02/계엄-파편.pdf" target="_blank" rel="noopener">에세이 : 계엄 파펀</a><a class="debate-link" href="http://krlt.org/wp-content/uploads/2026/02/현대문학자대회-작가와의대화_김멜라-낭독.pdf" target="_blank" rel="noopener">작가 낭독</a></div>
+    <div class="meta">사회: 강동호(인하대) · 배하은(DGIST)</div>
+    </section>
+  </div>
+</body>
+</html>
